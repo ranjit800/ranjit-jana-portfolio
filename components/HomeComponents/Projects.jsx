@@ -1,8 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 import Image from "next/image";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
@@ -36,7 +34,7 @@ import northstarpic4 from "@/public/Images/projects/nts-imgs/img4.png";
 import northstarpic5 from "@/public/Images/projects/nts-imgs/img5.png";
 
 
-gsap.registerPlugin(ScrollTrigger);
+
 
 const projects = [
   {
@@ -84,45 +82,10 @@ const projects = [
 ];
 
 const Projects = () => {
-  const sectionRef = useRef(null);
-  const cardsRef = useRef([]);
-
-  useEffect(() => {
-    gsap.fromTo(
-      sectionRef.current,
-      { opacity: 0, y: 50 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 80%",
-          toggleActions: "play none none none",
-        },
-      }
-    );
-
-    gsap.fromTo(
-      cardsRef.current,
-      { opacity: 0, y: 20 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.6,
-        ease: "power2.out",
-        stagger: 0.2,
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 75%",
-        },
-      }
-    );
-  }, []);
+ 
 
   return (
-    <section ref={sectionRef} className="bg-black text-white py-16">
+    <section  className="bg-black text-white py-16">
       <div className="container mx-auto px-6 text-center">
         <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-pink-400 inline-block text-transparent bg-clip-text">
           🚀 My Projects
@@ -134,7 +97,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              ref={(el) => (cardsRef.current[index] = el)}
+             
               className="bg-gray-900 p-6 rounded-xl shadow-lg transform hover:scale-105 transition-all hover:shadow-2xl"
             >
               <div className="swiper-container">

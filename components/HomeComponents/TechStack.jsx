@@ -189,33 +189,11 @@
 
 "use client"; // Required for GSAP in Next.js
 
-import React, { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "remixicon/fonts/remixicon.css";
 
-gsap.registerPlugin(ScrollTrigger);
 
 const TechStack = () => {
-  const sectionRef = useRef(null);
-
-  useEffect(() => {
-    gsap.fromTo(
-      sectionRef.current,
-      { opacity: 0, y: 50 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 80%",
-          toggleActions: "play none none none",
-        },
-      }
-    );
-  }, []);
+  
 
   const stacks = [
     {
@@ -253,7 +231,7 @@ const TechStack = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="bg-black text-white py-16 min-h-screen">
+    <section  className="bg-black text-white py-16 min-h-screen">
       <div className="container mx-auto text-center px-6">
         <h2 className="text-4xl font-bold mb-12 bg-gradient-to-r from-blue-400 to-pink-400 inline-block text-transparent bg-clip-text">
           ⚡ My Tech Stack

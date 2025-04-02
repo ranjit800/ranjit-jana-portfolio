@@ -101,8 +101,9 @@ const TechNews = () => {
   }
 
   return (
-    <div className="container mx-auto px-4 py-8 min-h-[80vh]">
-      <div className="flex flex-col md:flex-row justify-between items-center mb-8">
+    <div className=" px-4 py-8 min-h-[80vh] bg-black">
+     <div className="container mx-auto">
+     <div className="flex flex-col md:flex-row justify-between items-center mb-8">
         <h2 className="text-3xl font-bold flex items-center">
           <BiNews className="text-blue-500 mr-2" size={32} />
           Latest {category.charAt(0).toUpperCase() + category.slice(1)} News
@@ -231,6 +232,7 @@ const TechNews = () => {
           </a>
         </p>
       </div>
+     </div>
     </div>
   );
 };

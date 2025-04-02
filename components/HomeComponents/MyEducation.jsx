@@ -1,24 +1,9 @@
 "use client"
-import React, { useEffect, useRef } from "react";
-import { gsap } from "gsap";
 
 const MyEducation = () => {
-  const educationRef = useRef(null);
-  const experienceRef = useRef(null);
+  
 
-  useEffect(() => {
-    gsap.fromTo(
-      educationRef.current,
-      { x: -50, opacity: 0 },
-      { x: 0, opacity: 1, duration: 1.2, ease: "power3.out" }
-    );
-
-    gsap.fromTo(
-      experienceRef.current,
-      { x: 50, opacity: 0 },
-      { x: 0, opacity: 1, duration: 1.2, ease: "power3.out", delay: 0.3 }
-    );
-  }, []);
+  
 
   const educationData = [
     {
@@ -59,7 +44,7 @@ const MyEducation = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Education Section */}
-          <div ref={educationRef} className="bg-gray-900 p-8 rounded-lg shadow-lg border-l-4 border-blue-500 transition-all duration-300 hover:shadow-[0_0_30px_rgba(59,130,246,0.5)]">
+          <div  className="bg-gray-900 p-8 rounded-lg shadow-lg border-l-4 border-blue-500 transition-all duration-300 hover:shadow-[0_0_30px_rgba(59,130,246,0.5)]">
             <h3 className="text-3xl font-semibold mb-6 text-blue-400">🎓 Education</h3>
             <div className="space-y-6">
               {educationData.map((edu, index) => (
@@ -74,7 +59,7 @@ const MyEducation = () => {
           </div>
 
           {/* Experience Section */}
-          <div ref={experienceRef} className="bg-gray-900 p-8 rounded-lg shadow-lg border-l-4 border-green-500 transition-all duration-300 hover:shadow-[0_0_30px_rgba(34,197,94,0.5)]">
+          <div  className="bg-gray-900 p-8 rounded-lg shadow-lg border-l-4 border-green-500 transition-all duration-300 hover:shadow-[0_0_30px_rgba(34,197,94,0.5)]">
             <h3 className="text-3xl font-semibold mb-6 text-green-400">💼 Experience</h3>
             <div className="space-y-6">
               {experienceData.map((exp, index) => (

@@ -1,31 +1,12 @@
 "use client"
-import React, { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+
 import background from "@/public/Images/bgThree.svg"
 
-gsap.registerPlugin(ScrollTrigger);
+
 
 const ShortBio = () => {
-  const bioRef = useRef(null);
 
-  useEffect(() => {
-    gsap.fromTo(
-      bioRef.current,
-      { opacity: 0, y: 50 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: bioRef.current,
-          start: "top 80%", // Adjust when the animation starts
-          toggleActions: "play none none none",
-        },
-      }
-    );
-  }, []);
 
   return (
     <section 
@@ -37,7 +18,7 @@ const ShortBio = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div ref={bioRef} className="max-w-3xl text-center space-y-4 px-6 md:px-0 opacity-0">
+      <div className="max-w-3xl text-center space-y-4 px-6 md:px-0 ">
         <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text">
           Crafting Scalable & Stunning Web Experiences 🚀
         </h2>
