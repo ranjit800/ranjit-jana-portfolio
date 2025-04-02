@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from "react";
 
 import Image from "next/image";
-import profilePic from "@/public/Images/pic.jpg"; // Replace with your image
+import profilePic from "@/public/Images/my-pic.jpg"; // Replace with your image
 
 
 
