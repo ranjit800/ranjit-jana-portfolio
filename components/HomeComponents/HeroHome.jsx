@@ -56,10 +56,7 @@ const HeroHome = () => {
                 <span className="animate-blink">|</span>
               </span>
               <p className="text-lg mt-4 leading-relaxed font-light">
-                Building fast, responsive, and user-friendly web applications with Next.js, React, Tailwind CSS & Node.js. Passionate about clean UI/UX and seamless performance.
-                Let's turn ideas into reality!
-                <br />
-                🚀 Let's build something amazing together!
+               Passionate about generating clean UI/UX and seamless performance. Turn your ideas into reality. Let's build something amazing together!
               </p>
             </h1>
             <div className="flex gap-4">
