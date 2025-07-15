@@ -33,10 +33,58 @@ import northstarpic3 from "@/public/Images/projects/nts-imgs/img3.png";
 import northstarpic4 from "@/public/Images/projects/nts-imgs/img4.png";
 import northstarpic5 from "@/public/Images/projects/nts-imgs/img5.png";
 
+import luxora1 from "@/public/Images/projects/luxora-realty/img1.png";
+import luxora2 from "@/public/Images/projects/luxora-realty/img2.png";
+import luxora3 from "@/public/Images/projects/luxora-realty/img3.png";
+import luxora4 from "@/public/Images/projects/luxora-realty/img4.png";
+import luxora5 from "@/public/Images/projects/luxora-realty/img5.png";
 
+import movieapp1 from "@/public/Images/projects/movie-app/img1.png";
+import movieapp2 from "@/public/Images/projects/movie-app/img2.png";
+import movieapp3 from "@/public/Images/projects/movie-app/img3.png";
+import movieapp4 from "@/public/Images/projects/movie-app/img4.png";
+import movieapp5 from "@/public/Images/projects/movie-app/img5.png";
 
 
 const projects = [
+   {
+    title: "Luxora Realty - MERN Real Estate Platform",
+    images: [luxora1, luxora2, luxora3, luxora4, luxora5],
+    description:
+      "A full-featured real estate listing platform built with the MERN stack. Users can create, edit, and browse listings with authentication powered by Firebase and MongoDB.",
+    features: [
+      "JWT Auth & Firebase Google Login",
+      "Create, Edit, and Search Listings",
+      "Fully Responsive Design",
+      "Role-Based Access for Private Routes"
+    ],
+    tech: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Tailwind CSS",
+      "Firebase Auth",
+      "Cloudinary"
+    ],
+    liveDemo: "https://luxora-realty-real-estate-services.onrender.com",
+    github: "https://github.com/ranjit800/mern-real-estate"
+  },
+    {
+    title: "Rj Movie App",
+    images: [movieapp1, movieapp2, movieapp3, movieapp4, movieapp5],
+    description:
+      "A React-based movie browsing platform that fetches and displays trending movies, TV shows, and web series using a third-party API. Users can explore detailed information, ratings, and watch trailers.",
+    features: [
+      "Search and Filter Movies & Series",
+      "API-based Real-Time Data",
+      "View Ratings and Descriptions",
+      "Watch Official Trailers"
+    ],
+    tech: ["React", "TMDB API", "Axios", "React Router", "Tailwind CSS"],
+    liveDemo: "https://rj-movie-find-app.onrender.com/",
+    github: "https://github.com/ranjit800/Rj-movie-app"
+  },
   {
     title: "Nakya - Chemistry Lab Management System (In Development)",
     images: [LabProject1, LabProject2, LabProject3, LabProject4, LabProject5, LabProject6],
